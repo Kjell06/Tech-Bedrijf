@@ -11,4 +11,10 @@ html{
 body{
     font-size: 2rem;
     font-family: sans-serif;
+    background: black;
+}
+
+img{
+    height: 10rem;
+    width: 10rem;
 }
