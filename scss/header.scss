@@ -1,8 +1,10 @@
+@use 'colors';
+
 .header {
     width: 100%;
     height: 20vh;
     display: flex;
-    background:#387ce2;
+    background:colors.$blue;
     align-items: center;
     list-style: none;
     text-decoration: none;
@@ -21,7 +23,7 @@
 
 
 .headerItems {
-    color: white;
+    color:colors.$white;
     display: flex;
     text-decoration: none;
     list-style: none;
@@ -33,5 +35,5 @@
 .headerItem{
     list-style:none;
     text-decoration:none;
-    color:white;
+    color:colors.$white;
 }

@@ -1,3 +1,5 @@
+@use 'colors';
+
 .showcase {
     height: 50vh;
     display: flex;
@@ -5,12 +7,12 @@
     justify-content: center;
     flex-direction: column;
     gap: 3rem;
-    border-bottom: 0.8rem solid #387ce2;
+    border-bottom: 0.8rem solid colors.$blue;
 }
 
 .showcaseTitle {
     font-size: 4rem;
-    color: #969696;
+    color:colors.$gray
 }
 
 .randomsdg {
