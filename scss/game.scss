@@ -1,0 +1,41 @@
+.ctasection{
+    height:80vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-bottom:0.8rem solid #387ce2;
+}
+
+.ctablok{
+    width:130rem;
+    height:55rem;
+    border-radius:1.5rem;
+    position: relative;
+}
+
+.ctabutton{
+    font-size:3rem;
+    padding:2rem;
+    background:#86d1ed;
+    color:white;
+    list-style:none;
+    text-decoration:none;
+    border-radius:1.5rem;
+    position: absolute;
+    right:3rem;
+    bottom:3rem;
+    transition:0.5s;
+}
+
+.ctabutton:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+.ctablokimg{
+    width:100%;
+    height:100%;
+    border-radius:1.5rem;
+}

@@ -1,0 +1,29 @@
+.showcase {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    border-bottom: 0.8rem solid #387ce2;
+}
+
+.showcaseTitle {
+    font-size: 4rem;
+    color: #969696;
+}
+
+.randomsdg {
+    width: 80rem;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.randomsdgimg {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 1rem;
+}
