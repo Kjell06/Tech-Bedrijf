@@ -33,5 +33,4 @@ $RECYCLE.BIN/
 .VolumeIcon.icns
 
 ### Application
-docker/mysqldata
 public/phpMyAdmin/tmp
