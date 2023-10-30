@@ -30,7 +30,7 @@ body {
 .headerLogo {
   display: flex;
   align-items: center;
-  margin-left: -70rem;
+  margin-left: -50rem;
   height: 20rem;
   width: 20rem;
 }
@@ -52,7 +52,7 @@ body {
 }
 
 .showcase {
-  height: 50vh;
+  height: 60rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,14 +67,15 @@ body {
 }
 
 .card {
+  margin-top:10rem;
   width: 25rem;
-  height: 25rem;
+  height: auto;
   border: 0.5rem solid black;
 }
 
 .showcaseTitle {
-  font-size: 4rem;
-  color: #969696;
+    font-size: 4rem;
+    color: #969696;
 }
 
 .randomsdg {

@@ -1,5 +1,5 @@
-<?php 
-    require_once('../source/config.php');
+<?php
+require_once('../source/config.php');
 ?>
 
 <!DOCTYPE html>
@@ -26,54 +26,34 @@
     <section class="showcase">
         <h1 class="showcaseTitle">Uitgelichte SDG's</h1>
         <div class="php--content">
-        <?php
-     
-        require_once('../source/config.php');
-
-   
-        $conn = new mysqli($servername, $username, $password, $database, $port);
-
-  
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-       
-$query = "SELECT * FROM sdg";
-
-
-$result = $conn->query($query);
-
-
-if ($result) {
-  
-    while ($row = $result->fetch_assoc()) {
-        echo '<div class="card">';
-      
-        foreach ($row as $column => $value) {
-        
-            if ($column !== 'id') {
-                echo $column . ": " . $value . "<br>";
+            <?php
+            require_once('../source/config.php');
+            $conn = new mysqli($servername, $username, $password, $database, $port);
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
             }
-        }
-        echo '</div>';
-        echo "<br>";
-    }
-} else {
-    echo "Error: " . $conn->error;
-}
+            $query = "SELECT * FROM sdg ORDER BY RAND() LIMIT 3";
+            $result = $conn->query($query);
+            if ($result) {
 
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="card">';
+                    foreach ($row as $column => $value) {
+                        $column = ($column === 'titel') ? ucfirst($column) : $column;
 
-$conn->close();
-?>
-           
-        ?>
+                        if ($column !== 'id') {
+                            echo '<div class="data-row"><span class="column-name">' . $column . ':</span> ' . $value . '</div>';
+                        }
+                    }
+                    echo '</div>';
+                }
+            } else {
+                echo "Error: " . $conn->error;
+            }
+
+            $conn->close();
+            ?>
         </div>
-        <section class="randomsdg">
-            <img class="randomsdgimg" src="img/cleanwater.png" alt="">
-            <img class="randomsdgimg" src="img/affordableandenergy.png" alt="">
-            <img class="randomsdgimg" src="img/decentwork.png" alt="">
-        </section>
     </section>
     <section class="ctasection">
         <section class="ctablok">
