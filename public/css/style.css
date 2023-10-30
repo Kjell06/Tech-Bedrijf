@@ -61,6 +61,17 @@ body {
   border-bottom: 0.8rem solid #387ce2;
 }
 
+.php--content {
+  display: flex;
+  gap: 2rem;
+}
+
+.card {
+  width: 20rem;
+  height: 20rem;
+  border: 0.5rem solid black;
+}
+
 .showcaseTitle {
   font-size: 4rem;
   color: #969696;
