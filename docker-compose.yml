@@ -34,7 +34,7 @@ services:
   mariadb:
     image: mariadb:latest
     environment:
-      MYSQL_DATABASE: newsletters
+      MYSQL_DATABASE: bo pagina
       MYSQL_USER: db_user
       MYSQL_PASSWORD: mijn_p@ss#
       MYSQL_ROOT_PASSWORD: 4dy5qwtrsag#!sad

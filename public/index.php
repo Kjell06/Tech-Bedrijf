@@ -27,9 +27,46 @@
         <h1 class="showcaseTitle">Uitgelichte SDG's</h1>
         <div class="php--content">
         <?php
-            for ($i=0; $i < 3 ; $i++) { 
-                include('../views/card.php');
+     
+        require_once('../source/config.php');
+
+   
+        $conn = new mysqli($servername, $username, $password, $database, $port);
+
+  
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+       
+$query = "SELECT * FROM sdg";
+
+
+$result = $conn->query($query);
+
+
+if ($result) {
+  
+    while ($row = $result->fetch_assoc()) {
+        echo '<div class="card">';
+      
+        foreach ($row as $column => $value) {
+        
+            if ($column !== 'id') {
+                echo $column . ": " . $value . "<br>";
             }
+        }
+        echo '</div>';
+        echo "<br>";
+    }
+} else {
+    echo "Error: " . $conn->error;
+}
+
+
+$conn->close();
+?>
+           
         ?>
         </div>
         <section class="randomsdg">
