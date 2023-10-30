@@ -37,15 +37,14 @@ require_once('../source/config.php');
             if ($result) {
 
                 while ($row = $result->fetch_assoc()) {
-                    echo '<div class="card">';
+                    echo '<a href="' . $row['link'] . '" class="card">';
                     foreach ($row as $column => $value) {
-                        $column = ($column === 'titel') ? ucfirst($column) : $column;
-
-                        if ($column !== 'id') {
+                        if ($column !== 'id' && $column !== 'link') {
+                            $column = ucfirst($column);
                             echo '<div class="data-row"><span class="column-name">' . $column . ':</span> ' . $value . '</div>';
                         }
                     }
-                    echo '</div>';
+                    echo '</a>';
                 }
             } else {
                 echo "Error: " . $conn->error;
