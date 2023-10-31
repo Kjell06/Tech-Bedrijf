@@ -60,6 +60,13 @@ require_once('../source/config.php');
             <a class="ctabutton" href="https://sdggame.nl/">Speel nu!</a>
         </section>
     </section>
+
+
+    <?php
+    
+
+
+    ?>
     <section class="sdguitleg">
         <section class="sdguitleginhoud">
             <div class="headingtextblok">
@@ -73,6 +80,7 @@ require_once('../source/config.php');
             </div>
             <img src="img/cleanwater.png" alt="" class="inhoud">
         </section>
+
     </section>
 </body>
 
