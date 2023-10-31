@@ -13,13 +13,21 @@
 
 .php--content{
     display: flex;
-    gap: 2rem;
+    gap:15rem;
 }
 
 .card{
-    width: 20rem;
-    height: 20rem;
-    border: 0.5rem solid black;
+    text-decoration: none;
+    color: colors.$black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 25rem;
+    height: 25rem;
+    background: colors.$lightBlue;
+    border-radius: 20%;
+    border: 0.3rem solid colors.$blue;
 }
 
 .showcaseTitle {

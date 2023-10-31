@@ -32,7 +32,7 @@ require_once('../source/config.php');
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
             }
-            $query = "SELECT * FROM sdg ORDER BY RAND() LIMIT 3";
+            $query = "SELECT Titel, link FROM sdg ORDER BY RAND() LIMIT 3";
             $result = $conn->query($query);
             if ($result) {
 

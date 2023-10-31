@@ -52,7 +52,7 @@ body {
 }
 
 .showcase {
-  height: 60rem;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,23 +63,26 @@ body {
 
 .php--content {
   display: flex;
-  gap: 2rem;
+  gap: 15rem;
 }
 
 .card {
   text-decoration: none;
-  color:inherit;
-  margin-top:10rem;
-  margin:10rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
   width: 25rem;
-  height: auto;
-  border: 0.5rem solid black;
-
+  height: 25rem;
+  background: #86d1ed;
+  border-radius: 20%;
+  border: 0.3rem solid #387ce2;
 }
 
 .showcaseTitle {
-    font-size: 4rem;
-    color: #969696;
+  font-size: 4rem;
+  color: #969696;
 }
 
 .randomsdg {
