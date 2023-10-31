@@ -38,9 +38,9 @@ require_once('../source/config.php');
 
                 while ($sdg = $result->fetch_assoc()) {
                     echo '<a href="' . $sdg['link'] . '" class="card">';
-                            echo '<div class="data-row"><span class="column-name">' . $sdg['titel']. ':</span> '. '</div>';
+                    echo '<div class="data-row"><span class="column-name">' . $sdg['titel'] . ':</span> ' . '</div>';
 
-                    
+
                     echo '</a>';
                 }
             } else {
@@ -58,36 +58,36 @@ require_once('../source/config.php');
         </section>
     </section>
 
-  
+
 
     <section class="sdguitleg">
         <section class="sdguitleginhoud">
             <div class="headingtextblok">
 
-            <?php
-            require_once('../source/config.php');
-            $conn = new mysqli($servername, $username, $password, $database, $port);
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-            $query = "SELECT titel, tekst FROM sdg ORDER BY RAND() LIMIT 3";
-            $result = $conn->query($query);
-            if ($result) {
-
-                while ($sdg = $result->fetch_assoc()) {
-                    echo '<a href="' . $sdg['tekst'] . '" class="text">';
-                            echo '<div class="data-row"><span class="column-name">' . $sdg['titel']. ':</span> '. '</div>';
-
-                    
-                    echo '</a>';
+                <?php
+                require_once('../source/config.php');
+                $conn = new mysqli($servername, $username, $password, $database, $port);
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
                 }
-            } else {
-                echo "Error: " . $conn->error;
-            }
+                $query = 'SELECT id,titel,tekst  FROM sdg WHERE id=30';
+                $result = $conn->query($query);
+                if ($result) {
 
-            $conn->close();
-            ?>
-    
+                    while ($sdg = $result->fetch_assoc()) {
+                        echo '<a href="' . $sdg['tekst'] . '" class="text">';
+                        echo '<div class="data-row"><span class="column-name">' . $sdg['titel']  . ':<br>' .  $sdg['tekst']. ':</span> ' . '</div>';
+
+
+                        echo '</a>';
+                    }
+                } else {
+                    echo "Error: " . $conn->error;
+                }
+
+                $conn->close();
+                ?>
+
 
                 <p class="heading"></p>
                 <p class="text"></p>

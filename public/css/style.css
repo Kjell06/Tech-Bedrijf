@@ -174,7 +174,9 @@ body {
 }
 
 .text {
-  font-size: 3;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
   width: 60rem;
 }
 
