@@ -16,7 +16,7 @@ require_once('../source/config.php');
 
 
     <nav class="header">
-        <a href="index.html"><img class="headerLogo" href="index.html" alt="logo site" src="img/lgo(3).svg">
+        <a href="index.html"><img class="headerLogo" href="index.html" alt="logo site" src="img/nvvn.png">
             <ul class="headerItems">
                 <li> <a class="headerItem" href="">Ontdek</a></li>
                 <li> <a class="headerItem" href="">Informatie</a></li>
@@ -32,18 +32,15 @@ require_once('../source/config.php');
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
             }
-            $query = "SELECT Titel, link FROM sdg ORDER BY RAND() LIMIT 3";
+            $query = "SELECT titel, link FROM sdg ORDER BY RAND() LIMIT 3";
             $result = $conn->query($query);
             if ($result) {
 
-                while ($row = $result->fetch_assoc()) {
-                    echo '<a href="' . $row['link'] . '" class="card">';
-                    foreach ($row as $column => $value) {
-                        if ($column !== 'id' && $column !== 'link') {
-                            $column = ucfirst($column);
-                            echo '<div class="data-row"><span class="column-name">' . $column . ':</span> ' . $value . '</div>';
-                        }
-                    }
+                while ($sdg = $result->fetch_assoc()) {
+                    echo '<a href="' . $sdg['link'] . '" class="card">';
+                            echo '<div class="data-row"><span class="column-name">' . $sdg['titel']. ':</span> '. '</div>';
+
+                    
                     echo '</a>';
                 }
             } else {
@@ -61,24 +58,41 @@ require_once('../source/config.php');
         </section>
     </section>
 
+  
 
-    <?php
-    
-
-
-    ?>
     <section class="sdguitleg">
         <section class="sdguitleginhoud">
             <div class="headingtextblok">
-                <p class="heading">Uitleg SDG's</p>
-                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, accusamus! Adipisci
-                    facilis perferendis neque mollitia hic, odit a commodi maxime consectetur! Adipisci distinctio,
-                    laborum inventore enim ullam est illum impedit!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat debitis quo vitae cumque
-                    necessitatibus numquam, deserunt laborum quaerat repudiandae enim, voluptatem voluptates tempore
-                    dolor voluptas expedita nesciunt pariatur, rerum itaque.</p>
+
+            <?php
+            require_once('../source/config.php');
+            $conn = new mysqli($servername, $username, $password, $database, $port);
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+            $query = "SELECT titel, tekst FROM sdg ORDER BY RAND() LIMIT 3";
+            $result = $conn->query($query);
+            if ($result) {
+
+                while ($sdg = $result->fetch_assoc()) {
+                    echo '<a href="' . $sdg['tekst'] . '" class="text">';
+                            echo '<div class="data-row"><span class="column-name">' . $sdg['titel']. ':</span> '. '</div>';
+
+                    
+                    echo '</a>';
+                }
+            } else {
+                echo "Error: " . $conn->error;
+            }
+
+            $conn->close();
+            ?>
+    
+
+                <p class="heading"></p>
+                <p class="text"></p>
             </div>
-            <img src="img/cleanwater.png" alt="" class="inhoud">
+            <img src="img/Wheel-SDG.png" alt="" class="inhoud">
         </section>
 
     </section>
