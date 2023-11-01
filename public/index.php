@@ -75,11 +75,7 @@ require_once('../source/config.php');
                 if ($result) {
 
                     while ($sdg = $result->fetch_assoc()) {
-                        echo '<a href="' . $sdg['tekst'] . '" class="text">';
                         echo '<div class="data-row"><span class="column-name">' . $sdg['titel']  . ':<br>' .  $sdg['tekst']. ':</span> ' . '</div>';
-
-
-                        echo '</a>';
                     }
                 } else {
                     echo "Error: " . $conn->error;

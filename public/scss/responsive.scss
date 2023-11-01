@@ -1,5 +1,11 @@
 
 @media screen and (max-width: 1200px) {
+
+    .header{
+        flex-wrap: wrap;
+    }
+
+
     .headerLogo{
         margin-left:-5rem;
         padding-right:4rem;
@@ -30,8 +36,7 @@
     }
 
     .ctablokimg{
-        width:100%;
-        height:100%;
+        object-fit: contain;
     }
 
     .ctabutton{
@@ -40,5 +45,12 @@
         font-size:1.2rem;
     }
 
+    
+    .headingtextblok{
+  
+        align-items:normal;
+        flex-direction: column;
+
+}   
 
 }
