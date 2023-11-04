@@ -229,5 +229,20 @@ body {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 500px) {
+  .php--content {
+    gap: 2rem;
+  }
+  .card {
+    width: 13rem;
+    height: 13rem;
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+  .inhoud {
+    width: 11.5rem;
+    height: 11.5rem;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
