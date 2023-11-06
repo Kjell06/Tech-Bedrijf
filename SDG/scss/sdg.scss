@@ -1,0 +1,80 @@
+@use "../scss/colors.scss";
+
+.sdg__title{
+    font-size:5rem;
+    margin-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:2rem;
+}
+
+.sdg__information{
+    display: flex;
+    background-color: blue;
+}
+
+.sdg__desc{
+    flex:1;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left:3rem;
+    color:rgb(204, 199, 199);
+}
+
+.sdg__image{
+    flex:1;
+    object-fit: contain;
+    width:50rem;
+    height:50rem;
+}
+
+
+.sdg__subcontent{
+    background-color: #00AED9;
+    margin-top:6rem;
+    display:flex;
+    color:white;
+}
+
+
+.sdg__subimage{
+    flex: 1;
+    object-fit: contain;
+    width:50rem;
+    height:50rem;
+    padding-left:1rem;
+}
+
+
+.sdg__subdesc{
+    flex: 4;
+    font-size: 3rem;
+    padding-left:3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(204, 199, 199);
+}
+
+
+.sdg__cta{
+    margin-top:5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #00AED9;
+    width:100%;
+    height:20vh;
+}
+
+.sdg__ctaLink{
+    margin-top:2rem;
+    text-decoration: none;
+    background-color: rgb(6, 3, 172);
+    color:#EEE;
+    border: solid 2rem rgb(6, 3, 172);
+
+}
