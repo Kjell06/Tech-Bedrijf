@@ -21,7 +21,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #387ce2;
+  background: #00AED9;
   padding: 2rem;
 }
 .headerItems {
@@ -52,7 +52,7 @@ body {
 
 .sdg__information {
   display: flex;
-  background-color: blue;
+  background-color: #00AED9;
 }
 
 .sdg__desc {
@@ -84,7 +84,7 @@ body {
   object-fit: contain;
   width: 50rem;
   height: 50rem;
-  padding-left: 1rem;
+  padding-left: 2rem;
 }
 
 .sdg__subdesc {
@@ -95,6 +95,7 @@ body {
   justify-content: center;
   align-items: center;
   color: rgb(204, 199, 199);
+  padding-right: 2rem;
 }
 
 .sdg__cta {
@@ -113,6 +114,68 @@ body {
   background-color: rgb(6, 3, 172);
   color: #EEE;
   border: solid 2rem rgb(6, 3, 172);
+}
+
+@media screen and (max-width: 62.5rem) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+  }
+  .headerLogo {
+    height: auto;
+    width: auto;
+    object-fit: contain;
+  }
+  .headerItems {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sdg__title {
+    font-size: 4rem;
+  }
+  .sdg__information {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .sdg__image {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+  }
+  .sdg__subcontent {
+    display: flex;
+    flex-direction: column;
+  }
+  .sdg__subdesc {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+  .sdg__subimage {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+  .sdg__cta {
+    margin-top: 2rem;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+  }
+  .sdg__ctaLink {
+    margin-top: 5rem;
+    font-size: 4rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
